@@ -1,25 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaD-if-YTK">
+                                <rect key="frame" x="55" y="90" width="265" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1gU-jp-llM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-9t-zZB">
+                                <rect key="frame" x="55" y="169" width="265" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GUu-M6-xGE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKA-lP-miV">
+                                <rect key="frame" x="274" y="277" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="disconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rZv-rg-RxQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duu-Zy-Ene">
+                                <rect key="frame" x="63" y="277" width="30" height="30"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="SSHLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EcZ-Au-yFI"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="sdfsdfsdfasdfsad" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CtM-9w-Yks">
+                                <rect key="frame" x="63" y="380" width="257" height="228"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TaD-if-YTK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="55" id="0R5-1f-f8q"/>
+                            <constraint firstItem="gfy-9t-zZB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="55" id="Gq5-Rz-p52"/>
+                            <constraint firstItem="TaD-if-YTK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HeY-fa-M4u"/>
+                            <constraint firstItem="gfy-9t-zZB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K6R-EE-87Z"/>
+                            <constraint firstItem="TaD-if-YTK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="arn-pR-EqJ"/>
+                            <constraint firstItem="TaD-if-YTK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eBB-zb-4h4"/>
+                            <constraint firstItem="gfy-9t-zZB" firstAttribute="top" secondItem="TaD-if-YTK" secondAttribute="bottom" constant="35" id="eCP-G2-SfM"/>
+                            <constraint firstAttribute="trailing" secondItem="TaD-if-YTK" secondAttribute="trailing" constant="55" id="vhp-7f-oVw"/>
+                            <constraint firstAttribute="trailing" secondItem="gfy-9t-zZB" secondAttribute="trailing" constant="55" id="wLT-A0-Xe7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HeY-fa-M4u"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ipTextField" destination="TaD-if-YTK" id="BR2-I6-uUw"/>
+                        <outlet property="sshPasswordTextField" destination="gfy-9t-zZB" id="q6m-Lx-VdC"/>
+                        <outlet property="textView" destination="CtM-9w-Yks" id="Put-Ro-V1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="356.5"/>
         </scene>
     </scenes>
 </document>
